@@ -1,0 +1,10 @@
+<h2>App Component</h2>
+
+@for (climate of climates; track $index) {
+  <div>
+    <div> Fecha: {{climate.date}} </div>
+    <div> Temperatura (C): {{climate.temperatureC}} </div>
+    <div> Sensación: {{climate.summary}} </div>
+    <hr />
+  </div>
+}
