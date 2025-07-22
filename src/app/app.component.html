@@ -1,13 +1,4 @@
-<h2>App Component</h2>
-
-@for (climate of climates; track $index) {
-  <div>
-    <div> Fecha: {{climate.date}} </div>
-    <div> Temperatura (C): {{climate.temperatureC}} </div>
-    <div> Sensación: {{climate.summary}} </div>
-    <hr />
-  </div>
-}
-
-<app-home></app-home>
-<router-outlet></router-outlet>
+<app-menu></app-menu> <!-- Invoca al toolbar con los botones -->
+<div class="contenedor"> <!-- El contenedor sirve para la estética del outlet. -->
+    <router-outlet></router-outlet> <!-- Invoca al enrutador y muestra lo que tiene cada ruta -->
+</div>
