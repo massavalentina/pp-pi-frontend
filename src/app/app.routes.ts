@@ -6,7 +6,7 @@ import { Ruta3Component } from './pages/ruta3/ruta3.component';
 import { AppComponent } from './app.component';
 
 export const routes: Routes = [
-  { path: '', component: AppComponent },
+  { path: '', component: HomeComponent },
   { path: 'ruta1', component: Ruta1Component },
   { path: 'ruta2', component: Ruta2Component },
   { path: 'ruta3', component: Ruta3Component }
