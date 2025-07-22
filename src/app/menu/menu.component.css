@@ -1,0 +1,27 @@
+.toolbar
+{
+  background-color: #4982ce; /* azul oscuro */
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0.01px 5px;
+  display: flex;
+  align-items:center;
+  gap: 10px;
+  border-radius: 5px; /* redondeo de la barra */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra */
+}
+
+.nav-button {
+  padding: 6px 130px;
+  background-color: rgba(255, 255, 255, 0.297);
+  color: #004aad;
+  border-radius: 0px; /* redondeo del botón */
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+  background-color: #cce0ff; /* color al pasar el mouse */
+  color: #002a66;
+}
