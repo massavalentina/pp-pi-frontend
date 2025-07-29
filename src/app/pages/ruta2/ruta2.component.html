@@ -1,8 +1,33 @@
-<section>
-    <h1>Autores</h1>
+<h1>Autores</h1>
 
-<button mat-raised-button color="primary" routerLink="/ruta2/crear">
-    Crear nuevo autor
+<!-- Creation button -->
+<button mat-raised-button color="primary" routerLink="/ruta2/createAuthor">
+    Crear un nuevo autor de libros
 </button>
 
-</section>
+<!-- Table for all the created authors -->
+@if(authors){
+<table mat-table [dataSource]="authors" class="mat-elevation-z8 elements-index">
+  
+    <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let author">{{author.firstName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef>Apellido</th>
+        <td mat-cell *matCellDef="let author">{{author.lastName}}</td>
+    </ng-container>
+   
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let author">
+            <!-- Allows to edit or eliminate the author -->
+            <a mat-flat-button routerLink="/ruta2/editAuthor/{{author.id}}">Editar</a>
+            <button mat-flat-button color="warn" (click)="Delete(author.id)">Eliminar</button>
+        </td>
+   
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="columnsToShow"></tr>
+    <tr mat-row *matRowDef="let row; columns:columnsToShow"></tr>
+</table>}

@@ -1,0 +1,4 @@
+@if (authorToEdit){
+    <app-author-form title="Editar autor" [author]="authorToEdit" 
+    (formPost)="SaveChanges($event)"></app-author-form>
+}

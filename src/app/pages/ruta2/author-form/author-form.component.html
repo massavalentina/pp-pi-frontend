@@ -1,0 +1,20 @@
+<h2>{{title}}</h2>
+
+<form (ngSubmit)="SaveChanges()" [formGroup]="form">
+    <!-- Name of the Author -->
+    <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input [formControl]="form.controls.firstName" matInput/>
+    </mat-form-field>
+
+    <!-- Lastname of the Author -->
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido</mat-label>
+      <input [formControl]="form.controls.lastName" matInput/>
+    </mat-form-field>
+  
+    <div>
+        <button type="submit" mat-flat-button>Guardar Cambios</button>
+        <a mat-stroked-button routerLink="/ruta2">Cancelar</a>
+    </div>
+</form>

@@ -4,27 +4,23 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { Router, RouterLink } from '@angular/router';
 import { AuthorsService } from '../../../authors.service';
-import { authorCreation } from '../authors.models';
+import { IAuthorCreation } from '../authors.models';
+import { AuthorFormComponent } from '../author-form/author-form.component';
 
 @Component({
   selector: 'app-create-authors',
   standalone:true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, RouterLink],
+  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, AuthorFormComponent],
   templateUrl: './create-authors.component.html',
   styleUrl: './create-authors.component.css'
 })
 export class CreateAuthorsComponent {
-  private readonly formBuilder = inject(FormBuilder)
-  authorService = inject(AuthorsService)
-  router = inject(Router)
-  form = this.formBuilder.group({
-    firstName: [''],
-    lastName: ['']
-  })
 
-  saveChanges(){
-    let author = this.form.value as authorCreation
-    this.authorService.create(author).subscribe(()=>{
+  authorService = inject(AuthorsService)
+  router = inject(Router);
+
+  SaveChanges(author:IAuthorCreation){
+    this.authorService.Create(author).subscribe(()=>{
       this.router.navigate(["ruta2"])
     })
   }
