@@ -1,0 +1,24 @@
+<h2 class="titulo-formulario">{{ titulo }}</h2>
+
+<form class="formulario-reseña" (submit)="guardarCambios()" [formGroup]="form">
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Comentario</mat-label>
+    <input formControlName="comment" matInput placeholder="Escribí tu comentario..." />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="campo-formulario">
+    <mat-label>Rating</mat-label>
+    <mat-select formControlName="rating" placeholder="Seleccioná un puntaje">
+      @for (rate of rates; track rate) {
+        <mat-option [value]="rate">
+          {{ rate }}
+        </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <div class="botones-formulario">
+    <button type="submit" mat-flat-button color="primary">Guardar Cambios</button>
+    <button type="button" mat-stroked-button color="warn" (click)="cancelar()">Cancelar</button>
+  </div>
+</form>
