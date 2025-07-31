@@ -1,0 +1,56 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4rem;
+  max-height: 90vh;
+  overflow: auto;
+  font-size: 14px;
+}
+
+.form-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.active {
+  background-color: #7ec480;
+}
+
+.inactive {
+  background-color: #ff675c;
+}
+
+
+.badge-container {
+  margin-bottom: -8px;
+  font-size: 14px;
+}
+
+.custom-button {
+  background-color: #a496f1;
+  color: white;
+}

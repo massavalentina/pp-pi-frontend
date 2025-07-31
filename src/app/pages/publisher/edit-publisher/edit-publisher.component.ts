@@ -2,7 +2,7 @@ import { Component, inject, Input, numberAttribute, OnInit } from '@angular/core
 import { Router } from '@angular/router';
 import { PublisherService } from '../../../services/publisher/publisher.service';
 import { CreatePublisher, Publisher } from '../../../models/publisher.model';
-import { PublisherFormComponent } from '../../../components/publisher-form-component/publisher-form-component.component';
+import { PublisherFormComponent } from '../../../components/publisher/publisher-form-component/publisher-form-component.component';
 
 @Component({
   selector: 'app-edit-publisher',

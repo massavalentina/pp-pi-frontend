@@ -1,0 +1,68 @@
+.container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  color: #a496f1;
+  text-transform: uppercase;
+}
+
+.table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table .mat-header-cell {
+  background-color: #1976d2;
+  color:aqua;
+}
+
+.custom-button {
+  background-color: #a496f1;
+  color: white;
+}
+
+.empty-message {
+  text-align: center;
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.activity-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 12px;
+  text-align: center;
+  color: white; 
+}
+
+.badge-active {
+  background-color: #7ec480; 
+}
+
+.badge-inactive {
+  background-color: #ff675c; 
+}
+
+.mat-header-cell {
+  font-weight: bold;
+  color: #333;
+}
+
+.mat-cell {
+  color: #555;
+}

@@ -4,7 +4,7 @@ export interface CreatePublisher{
     name: string;
     country: string;
     websiteUrl: string;
-    foundedDate: string; 
+    foundedAt: string; 
     isActive: boolean;
     createdAt: Date; 
 }
@@ -13,4 +13,9 @@ export interface CreatePublisher{
 export interface Publisher {
     id: number;
     name: string;
+    country: string;
+    websiteUrl: string;
+    foundedAt: string; 
+    isActive: boolean;
+    createdAt: Date; 
 }

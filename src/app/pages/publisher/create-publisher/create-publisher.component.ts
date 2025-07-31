@@ -7,7 +7,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { Router, RouterLink } from '@angular/router';
 import { PublisherService } from '../../../services/publisher/publisher.service';
 import { CreatePublisher } from '../../../models/publisher.model';
-import { PublisherFormComponent } from '../../../components/publisher-form-component/publisher-form-component.component';
+import { PublisherFormComponent } from '../../../components/publisher/publisher-form-component/publisher-form-component.component';
 
 @Component({
   selector: 'app-create-publisher',
