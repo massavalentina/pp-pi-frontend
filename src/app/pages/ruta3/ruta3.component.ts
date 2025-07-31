@@ -7,6 +7,8 @@ import { Review } from './reviews.models';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
+    standalone: true,
+
   selector: 'app-ruta3',
   standalone: true,
   imports: [MatButtonModule, RouterLink, RouterModule, MatTableModule],

@@ -1,0 +1,92 @@
+<div class="form-container">
+  <h2 class="form-title">{{ title }}</h2>
+
+  <form [formGroup]="publisherForm" (ngSubmit)="saveChanges()">
+    <!-- Nombre del editorial -->
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Editorial</mat-label>
+      <input matInput formControlName="name" required>
+      <mat-error *ngIf="controls.name.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.name.errors?.['minlength']">
+        El nombre debe tener al menos 3 caracteres.
+      </mat-error>
+      <mat-error *ngIf="controls.name.errors?.['maxlength']">
+        El nombre no puede exceder los 50 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Fecha de fundación -->
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha de fundación</mat-label>
+      <input matInput type="date" formControlName="foundedAt" required>
+      <mat-error *ngIf="controls.foundedAt.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.foundedAt.errors?.['futureDate']">
+        La fecha no puede estar en el futuro.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- País -->
+    <mat-form-field appearance="outline">
+      <mat-label>País</mat-label>
+      <input matInput formControlName="country" required>
+      <mat-error *ngIf="controls.country.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.country.errors?.['minlength']">
+        El nombre del país debe tener al menos 2 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- URL oficial -->
+    <mat-form-field appearance="outline">
+      <mat-label>URL oficial</mat-label>
+      <input matInput formControlName="websiteUrl" required>
+      <mat-error *ngIf="controls.websiteUrl.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.websiteUrl.errors?.['pattern']">
+        Introduzca una URL válida (debe comenzar con http:// o https://).
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Estado -->
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <mat-select formControlName="isActive">
+        <mat-select-trigger>
+          <span
+            class="status-badge"
+            [ngClass]="controls.isActive.value ? 'active' : 'inactive'"
+          >
+            {{ controls.isActive.value ? 'Activo' : 'Inactivo' }}
+          </span>
+        </mat-select-trigger>
+        <mat-option [value]="true">
+          <span class="status-badge active">Activo</span>
+        </mat-option>
+        <mat-option [value]="false">
+          <span class="status-badge inactive">Inactivo</span>
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Botones -->
+    <div class="form-actions">
+      <button
+        mat-flat-button
+        class="custom-button"
+        type="submit"
+        [disabled]="!publisherForm.valid"
+      >
+        Guardar
+      </button>
+      <button mat-stroked-button type="button" (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>
