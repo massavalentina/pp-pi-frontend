@@ -5,7 +5,9 @@ import { Ruta2Component } from './pages/ruta2/ruta2.component';
 import { Ruta3Component } from './pages/ruta3/ruta3.component';
 import { CreateAuthorsComponent } from './pages/ruta2/create-authors/create-authors.component';
 import { EditAuthorsComponent } from './pages/ruta2/edit-authors/edit-authors.component';
+import { CreateReviewComponent } from './pages/ruta3/create-review/create-review.component';
 import { AppComponent } from './app.component';
+import { EditReviewComponent } from './pages/ruta3/edit-review/edit-review.component';
 import { CreatePublisherComponent } from './pages/publisher/create-publisher/create-publisher.component';
 import { EditPublisher } from './pages/publisher/edit-publisher/edit-publisher.component';
 
@@ -17,5 +19,7 @@ export const routes: Routes = [
   { path: 'ruta2', component: Ruta2Component },
   { path: 'ruta2/createAuthor', component: CreateAuthorsComponent },
   { path: 'ruta2/editAuthor/:id', component: EditAuthorsComponent },
-  { path: 'ruta3', component: Ruta3Component }
+  { path: 'ruta3', component: Ruta3Component },
+  { path: 'ruta3/crear', component: CreateReviewComponent},
+  { path: 'ruta3/editar/:id', component: EditReviewComponent}
 ];
