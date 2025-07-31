@@ -48,7 +48,7 @@ export class Ruta2Component {
             icon: 'success', // The big icon - Success
             title: 'Registro eliminado', // The message
             text: 'El registro fue eliminado correctamente.',
-            timer: 100,
+            timer: 5000,
             showConfirmButton: false
               
           });
