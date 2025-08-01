@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CreationReview, Review } from '../reviews.models';
+import { CreationReview, Review } from '../../../models/reviews.models';
 import { ReviewFormComponent } from '../review-form/review-form.component';
-import { ReviewService } from '../review.service';
+import { ReviewService } from '../../../services/review/review.service';
 
 @Component({
   selector: 'app-edit-review',

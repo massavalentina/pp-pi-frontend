@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { environment } from '../environments/environment';
-import { IAuthorCreation, IAuthors } from './pages/ruta2/authors.models';
+import { environment } from '../../../environments/environment';
+import { IAuthorCreation, IAuthors } from '../../models/authors.models';
 import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({

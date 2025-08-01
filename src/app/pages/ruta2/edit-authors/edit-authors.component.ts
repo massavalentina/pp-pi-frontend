@@ -1,6 +1,6 @@
 import { Component, inject, Input, numberAttribute, OnInit } from '@angular/core';
-import { AuthorsService } from '../../../authors.service';
-import { IAuthorCreation, IAuthors } from '../authors.models';
+import { AuthorsService } from '../../../services/author/authors.service';
+import { IAuthorCreation, IAuthors } from '../../../models/authors.models';
 import { AuthorFormComponent } from '../author-form/author-form.component';
 import { Router } from '@angular/router';
 

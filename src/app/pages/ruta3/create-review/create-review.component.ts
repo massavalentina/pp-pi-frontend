@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ReviewService } from '../review.service';
-import { CreationReview } from '../reviews.models';
+import { ReviewService } from '../../../services/review/review.service';
+import { CreationReview } from '../../../models/reviews.models';
 import { ReviewFormComponent } from '../review-form/review-form.component';
 
 @Component({

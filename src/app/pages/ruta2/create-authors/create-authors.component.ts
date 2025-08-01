@@ -3,8 +3,8 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'
 import { Router, RouterLink } from '@angular/router';
-import { AuthorsService } from '../../../authors.service';
-import { IAuthorCreation } from '../authors.models';
+import { AuthorsService } from '../../../services/author/authors.service';
+import { IAuthorCreation } from '../../../models/authors.models';
 import { AuthorFormComponent } from '../author-form/author-form.component';
 
 @Component({

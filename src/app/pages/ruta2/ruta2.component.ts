@@ -1,8 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule} from '@angular/material/button'
 import { RouterLink } from '@angular/router';
-import { AuthorsService } from '../../authors.service';
-import { IAuthors } from './authors.models';
+import { AuthorsService } from '../../services/author/authors.service';
+import { IAuthors } from '../../models/authors.models';
 import { MatTableModule} from '@angular/material/table';
 import Swal from 'sweetalert2';
 

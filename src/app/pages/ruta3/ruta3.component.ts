@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { RouterModule } from '@angular/router'; 
-import { ReviewService } from './review.service';
-import { Review } from './reviews.models';
+import { ReviewService } from '../../services/review/review.service';
+import { Review } from '../../models/reviews.models';
 import { MatTableModule } from '@angular/material/table';
 
 @Component({
