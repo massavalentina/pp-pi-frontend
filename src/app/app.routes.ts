@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { EditReviewComponent } from './pages/ruta3/edit-review/edit-review.component';
 import { CreatePublisherComponent } from './pages/publisher/create-publisher/create-publisher.component';
 import { EditPublisher } from './pages/publisher/edit-publisher/edit-publisher.component';
+import { BookComponent } from './pages/book/book.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,5 +22,6 @@ export const routes: Routes = [
   { path: 'ruta2/editAuthor/:id', component: EditAuthorsComponent },
   { path: 'ruta3', component: Ruta3Component },
   { path: 'ruta3/crear', component: CreateReviewComponent},
-  { path: 'ruta3/editar/:id', component: EditReviewComponent}
+  { path: 'ruta3/editar/:id', component: EditReviewComponent},
+  { path: 'book', component: BookComponent }
 ];
