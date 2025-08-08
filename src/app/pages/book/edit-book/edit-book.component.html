@@ -1,0 +1,4 @@
+@if (model){
+    <app-book-form-component title="Editar Libro" [model]="model"
+    (postForm)="saveChanges($event)"></app-book-form-component>
+}

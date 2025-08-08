@@ -1,0 +1,89 @@
+<div class="form-container">
+  <h2 class="form-title">{{ title }}</h2>
+
+  <form [formGroup]="bookForm" (ngSubmit)="saveChanges()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Título</mat-label>
+      <input matInput formControlName="title" required>
+      <mat-error *ngIf="controls.title.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.title.errors?.['minlength']">
+        El título debe tener al menos 2 caracteres.
+      </mat-error>
+      <mat-error *ngIf="controls.title.errors?.['maxlength']">
+        El título no puede exceder los 50 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Autor</mat-label>
+      <mat-select formControlName="authorId" required>
+        <mat-option *ngFor="let author of authors" [value]="author.id">
+          {{ author.fullName }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="controls.authorId.errors?.['required']">
+        Debe seleccionar un autor.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Editorial</mat-label>
+      <mat-select formControlName="publisherId" required>
+        <mat-option *ngFor="let publisher of publishers" [value]="publisher.id">
+          {{ publisher.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="controls.publisherId.errors?.['required']">
+        Debe seleccionar una editorial.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Descripción</mat-label>
+      <input matInput formControlName="description" required>
+      <mat-error *ngIf="controls.description.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.description.errors?.['minlength']">
+        La descripción debe tener al menos 2 caracteres.
+      </mat-error>
+      <mat-error *ngIf="controls.description.errors?.['maxlength']">
+        La descripción no puede exceder los 200 caracteres.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Fecha de publicación</mat-label>
+      <input matInput type="date" formControlName="publicationDate" required>
+      <mat-error *ngIf="controls.publicationDate.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.publicationDate.errors?.['futureDate']">
+        La fecha no puede estar en el futuro.
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>URL imagen</mat-label>
+      <input matInput formControlName="imageUrl" required>
+      <mat-error *ngIf="controls.imageUrl.errors?.['required']">
+        Este campo es obligatorio.
+      </mat-error>
+      <mat-error *ngIf="controls.imageUrl.errors?.['pattern']">
+        Introduzca una URL válida (http:// o https://).
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-actions">
+      <button mat-flat-button color="primary" type="submit" [disabled]="!bookForm.valid">
+        Guardar
+      </button>
+      <button mat-stroked-button type="button" (click)="cancel()">
+        Cancelar
+      </button>
+    </div>
+  </form>
+</div>

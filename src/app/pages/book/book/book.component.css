@@ -1,0 +1,19 @@
+.container {
+  padding: 24px;
+  max-width: 1000px;
+  margin: 3rem auto;
+  
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  margin-bottom: 16px;
+}
+
+
+.custom-button {
+  background-color: #794515;
+  color: white;
+}

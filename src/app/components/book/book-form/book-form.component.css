@@ -1,0 +1,33 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 3rem;
+  max-height: 90vh;
+  overflow: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.form-title {
+  margin-bottom: 0.25rem;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.custom-button {
+  background-color: #a496f1;
+  color: white;
+}

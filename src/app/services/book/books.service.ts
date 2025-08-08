@@ -13,28 +13,23 @@ export class BooksService {
    private http= inject(HttpClient);
   private urlBase = environment.apiUrl + '/api/books';
 
-// Get All books method
-public GetAll(): Observable<IBook[]>{
+public GetAllBooks(): Observable<IBook[]>{
   return this.http.get<IBook[]>(this.urlBase);
 }
 
-// Get books by its ID method
-public GetById(id:number):Observable<IBook>{
+public GetBookById(id:number):Observable<IBook>{
   return this.http.get<IBook>(`${this.urlBase}/${id}`);
 }
 
-// Creation of books method
-public Create(book:IBookCreation){
-  return this.http.post(this.urlBase, book);
-}
+  public CreateBook( book: IBookCreation){
+    return this.http.post(this.urlBase, book);
+  }
 
-// Update of an book method
-public Update(id:number, book:IBookCreation){
+public UpdateBook(id:number, book:IBookCreation){
   return this.http.put(`${this.urlBase}/${id}`, book);
 }
 
-// Delete of an book method
-public Delete(id:number){
+public DeleteBook(id:number){
   return this.http.delete(`${this.urlBase}/${id}`);
 }
 
