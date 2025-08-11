@@ -1,0 +1,38 @@
+<div *ngIf="loading" class="loading-container">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="error && !loading" class="error-message">
+  {{ error }}
+</div>
+
+<mat-card-actions>
+  <button mat-flat-button color="primary" (click)="editBook()">
+    Editar
+  </button>
+  <button mat-flat-button (click)="goBack()">
+    Volver
+  </button>
+</mat-card-actions>
+
+<mat-card *ngIf="book && !loading">
+  <mat-card-header>
+    <mat-card-title>{{ book.title }}</mat-card-title>
+    <mat-card-subtitle>
+      Autor ID: {{ book.authorId }} | Editorial ID: {{ book.publisherId }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="book.imageUrl" alt="Portada del libro">
+
+  <mat-card-content>
+    <p><strong>Descripción:</strong> {{ book.description }}</p>
+    <p><strong>Fecha de publicación:</strong> {{ book.publicationDate | date }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-flat-button color="primary" (click)="goBack()">
+      Volver
+    </button>
+  </mat-card-actions>
+</mat-card>

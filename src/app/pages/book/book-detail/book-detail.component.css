@@ -1,0 +1,21 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+mat-card {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+mat-card img {
+  max-height: 400px;
+  object-fit: contain;
+}

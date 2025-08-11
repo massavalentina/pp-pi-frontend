@@ -8,7 +8,7 @@ import { CreateReviewComponent } from './pages/ruta3/create-review/create-review
 import { EditReviewComponent } from './pages/ruta3/edit-review/edit-review.component';
 import { CreatePublisherComponent } from './pages/publisher/create-publisher/create-publisher.component';
 import { EditPublisher } from './pages/publisher/edit-publisher/edit-publisher.component';
-import { BookComponent } from './pages/book/book.component';
+import { BookComponent } from './pages/book/book/book.component';
 import { BooksListComponent } from './pages/ruta3/books-list/books-list.component';
 import { ReviewsListComponent } from './pages/ruta3/reviews-list/reviews-list.component';
 

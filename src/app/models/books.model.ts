@@ -1,16 +1,19 @@
 export interface IBookCreation{
-
+    title: string;
+    authorId: number;
+    publisherId: number;
+    description: string;
+    publicationDate: Date;
+    imageUrl: string;
 }
 
-// Interface for the authors reading
+
 export interface IBook{
-
+    id: number;
+    title: string;
+    authorId: number;
+    publisherId: number;
+    description: string;
+    publicationDate: Date;
+    imageUrl: string;
 }
-
-export interface BookForSelect {
-  id: number;
-  title: string;
-  authorName: string;
-  publisherName: string;
-}
-
