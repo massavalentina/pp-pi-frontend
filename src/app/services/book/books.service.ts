@@ -3,6 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { IBookCreation, IBook } from '../../models/books.model';
 import { Observable } from 'rxjs/internal/Observable';
+import { BookForSelect } from '../../models/reviews.models';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,11 @@ export class BooksService {
 // Get All books method
 public GetAll(): Observable<IBook[]>{
   return this.http.get<IBook[]>(this.urlBase);
+}
+
+// Metodo para mostrar en reviews.
+public GetBooksForReviews(): Observable<BookForSelect[]> {
+  return this.http.get<BookForSelect[]>('/api/books'); // endpoint real
 }
 
 // Get books by its ID method

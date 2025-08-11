@@ -1,1 +1,26 @@
-<app-review-form [titulo]="'Crear reseña'" (postForm)="guardar($event)"></app-review-form>
+<h2>Agregar reseña</h2>
+
+<!-- Select para elegir libro -->
+<mat-form-field appearance="fill" style="width: 100%; max-width: 400px;">
+  <mat-label>Seleccioná un libro</mat-label>
+  <mat-select (selectionChange)="onBookSelected($event.value)">
+    <mat-option *ngFor="let book of books" [value]="book.id">
+      {{ book.title }} — {{ book.authorName }} ({{ book.publisherName }})
+    </mat-option>
+    <mat-option [value]="0">-- Libro que no existe --</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<!-- Mostrar detalles si hay libro seleccionado -->
+@if (selectedBook && selectedBook.id == 0) {
+  <p><strong>Libro:</strong> {{ selectedBook.title }} - {{ selectedBook.authorName }} ({{ selectedBook.publisherName }})</p>
+
+  <!-- Mostrar formulario para la reseña -->
+  <app-review-form
+    [titulo]="'Crear reseña para: ' + selectedBook.title "
+    (postForm)="guardar($event)">
+  </app-review-form>
+} @else if (selectedBook && selectedBook.id === 0) {
+  <p><em>Libro no encontrado en el sistema.</em></p>
+}
+

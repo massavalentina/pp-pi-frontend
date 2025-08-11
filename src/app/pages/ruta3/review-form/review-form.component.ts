@@ -60,7 +60,7 @@ export class ReviewFormComponent implements OnChanges {
   }
 
   cancelar(): void {
-  this.router.navigate(['/ruta3']); // Ruta principal
+  this.router.navigate(['/reseñas']); // Ruta principal
   }
 
   

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Ruta3Component } from './ruta3.component';
+import { ReviewsListComponent } from './reviews-list.component';
 
-describe('Ruta3Component', () => {
-  let component: Ruta3Component;
-  let fixture: ComponentFixture<Ruta3Component>;
+describe('ReviewsListComponent', () => {
+  let component: ReviewsListComponent;
+  let fixture: ComponentFixture<ReviewsListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Ruta3Component]
+      imports: [ReviewsListComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Ruta3Component);
+    fixture = TestBed.createComponent(ReviewsListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

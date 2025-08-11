@@ -6,3 +6,11 @@ export interface IBookCreation{
 export interface IBook{
 
 }
+
+export interface BookForSelect {
+  id: number;
+  title: string;
+  authorName: string;
+  publisherName: string;
+}
+

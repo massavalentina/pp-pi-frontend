@@ -25,19 +25,19 @@ export class EditReviewComponent implements OnInit {
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get('id'));
     this.reviewService.obtenerPorId(this.id).subscribe((review: Review) => {
-      this.comment = review.Comentario;
-      this.rating = review.Puntaje;
+      this.comment = review.comment;
+      this.rating = review.rating;
     });
   }
 
   guardar(data: { comment: string; rating: number }) {
     const review: CreationReview = {
-      Comment: data.comment,
-      Rating: data.rating
+      comment: data.comment,
+      rating: data.rating
     };
 
     this.reviewService.actualizar(this.id, review).subscribe(() => {
-      this.router.navigate(['/ruta3']);
+      this.router.navigate(['reseñas']);
     });
   }
 }
