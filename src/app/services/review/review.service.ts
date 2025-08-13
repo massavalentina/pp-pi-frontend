@@ -19,8 +19,9 @@ export class ReviewService {
     return this.http.get<Review>(`${this.urlBase}/${id}`);
   }
 
-  public obtenerPorLibro(bookId: number): Observable<Review[]> {
-  return this.http.get<Review[]>(`/api/books/${bookId}/reviews`);
+
+  public getReviewsByBook(bookId: number): Observable<Review[]> {
+  return this.http.get<Review[]>(`${this.urlBase}/book/${bookId}`);
   }
 
   public crear(review: CreationReview) {

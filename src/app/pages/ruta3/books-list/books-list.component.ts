@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { RouterModule } from '@angular/router';
 import { BooksService } from '../../../services/book/books.service';
 import { BookForSelect } from '../../../models/reviews.models';
+import { IBook } from '../../../models/books.model';
 
 @Component({
   selector: 'app-books-list',
@@ -13,13 +14,13 @@ import { BookForSelect } from '../../../models/reviews.models';
   templateUrl: './books-list.component.html'
 })
 export class BooksListComponent implements OnInit {
-  books: BookForSelect[] = [];
+  books: IBook[] = [];
   columnasAMostrar = ['Titulo', 'Autor', 'Editorial', 'Acciones'];
 
   constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {
-    this.booksService.GetBooksForReviews().subscribe(data => {
+    this.booksService.GetAllBooks().subscribe(data => {
       this.books = data;
     });
   }

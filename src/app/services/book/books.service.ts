@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { IBookCreation, IBook } from '../../models/books.model';
+import { IBookCreation, IBook, IBookForReview } from '../../models/books.model';
 import { Observable } from 'rxjs/internal/Observable';
 import { BookForSelect } from '../../models/reviews.models';
 
@@ -16,6 +16,10 @@ export class BooksService {
 
 public GetAllBooks(): Observable<IBook[]>{
   return this.http.get<IBook[]>(this.urlBase);
+}
+
+public GetBooksForReviews(): Observable<IBookForReview[]> {
+  return this.http.get<IBookForReview[]>(`${this.urlBase}/forreviews`);
 }
 
 public GetBookById(id:number):Observable<IBook>{

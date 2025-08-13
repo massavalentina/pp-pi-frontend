@@ -1,6 +1,6 @@
 <h2 class="titulo-formulario">{{ titulo }}</h2>
 
-<form class="formulario-reseña" (submit)="guardarCambios()" [formGroup]="form">
+<form class="formulario-reseña" (ngSubmit)="guardarCambios()" [formGroup]="form">
   <mat-form-field appearance="outline" class="campo-formulario">
     <mat-label>Comentario</mat-label>
     <input formControlName="comment" matInput placeholder="Escribí tu comentario..." />
@@ -9,16 +9,15 @@
   <mat-form-field appearance="outline" class="campo-formulario">
     <mat-label>Rating</mat-label>
     <mat-select formControlName="rating" placeholder="Seleccioná un puntaje">
-      @for (rate of rates; track rate) {
-        <mat-option [value]="rate">
-          {{ rate }}
-        </mat-option>
-      }
+      <mat-option *ngFor="let rate of rates" [value]="rate">
+        {{ rate }}
+      </mat-option>
     </mat-select>
   </mat-form-field>
 
   <div class="botones-formulario">
     <button type="submit" mat-flat-button color="primary">Guardar Cambios</button>
-    <button type="button" mat-stroked-button color="warn" (click)="cancelar()">Volver atras</button>
+    <button type="button" mat-stroked-button color="warn" (click)="cancelar()">Volver atrás</button>
   </div>
 </form>
+

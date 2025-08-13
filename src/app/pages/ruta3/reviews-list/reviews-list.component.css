@@ -1,0 +1,108 @@
+.page-title {
+  color: #3E350E;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  color: #794515;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-container {
+  margin-bottom: 1rem;
+}
+
+.button-container button {
+  background-color: #DAAD29;
+  color: #3E350E;
+  font-weight: bold;
+}
+
+.button-container button:hover {
+  background-color: #F2DD6C;
+}
+
+.book-selector {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Personalizar Angular Material con tu paleta */
+::ng-deep .book-selector .mat-form-field-flex {
+  background-color: #EAE9E7;
+  border-radius: 6px;
+}
+
+::ng-deep .book-selector.mat-focused .mat-form-field-flex {
+  background-color: #F2DD6C;
+}
+
+::ng-deep .mat-select-value {
+  color: #3E350E;
+  font-weight: 500;
+}
+
+::ng-deep .mat-option {
+  background-color: #EAE9E7;
+  color: #3E350E;
+}
+
+::ng-deep .mat-option:hover {
+  background-color: #DAAD29;
+  color: #3E350E;
+}
+
+.book-title {
+  color: #794515;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  background-color: #79792E;
+  color: #EAE9E7;
+  font-weight: bold;
+}
+
+.mat-cell {
+  background-color: #F2DD6C;
+  color: #3E350E;
+}
+
+.mat-row:hover {
+  background-color: #DAAD29;
+  color: #3E350E;
+}
+
+.edit-btn {
+  background-color: #DAAD29;
+  color: #3E350E;
+  margin-right: 0.5rem;
+}
+
+.edit-btn:hover {
+  background-color: #F2DD6C;
+}
+
+.delete-btn {
+  background-color: #794515;
+  color: #EAE9E7;
+}
+
+.delete-btn:hover {
+  background-color: #3E350E;
+}
+
+.no-data {
+  color: #794515;
+  font-style: italic;
+}

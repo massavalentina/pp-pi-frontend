@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+.titulo-pagina {
+  color: #2c3e50; /* color principal oscuro */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* mat-form-field personalizado */
+.select-libro {
+  width: 100%;
+  max-width: 400px;
+}
+
+::ng-deep .mat-mdc-form-field {
+  --mdc-theme-primary: #ff7f50; /* Coral */
+}
+
+::ng-deep .mat-mdc-form-field .mdc-text-field {
+  background-color: #fff3e6; /* Fondo suave */
+  border-radius: 8px;
+}
+
+::ng-deep .mat-mdc-select-arrow {
+  color: #ff7f50; /* Flecha coral */
+}
+
+::ng-deep .mat-mdc-option {
+  background-color: #fff !important;
+}
+
+::ng-deep .mat-mdc-option:hover {
+  background-color: #ffe0cc !important; /* Hover suave */
+}
+
+.info-libro {
+  color: #34495e;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.mensaje-error {
+  color: #e74c3c;
+  font-weight: bold;
+}

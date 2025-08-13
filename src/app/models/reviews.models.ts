@@ -7,6 +7,7 @@ export interface CreationReview {
 export interface Review {
   id: number;
   bookId: number;
+  Title: string;
   comment: string;
   rating: number;
 }

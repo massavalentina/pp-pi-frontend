@@ -17,3 +17,10 @@ export interface IBook{
     publicationDate: Date;
     imageUrl: string;
 }
+
+export interface IBookForReview {
+  id: number;
+  title: string;
+  authorName: string;
+  publisherName: string;
+}

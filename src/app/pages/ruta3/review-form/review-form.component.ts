@@ -33,7 +33,7 @@ export class ReviewFormComponent implements OnChanges {
   form: FormGroup;
   rates: number[] = [1, 2, 3, 4, 5];
 
-   private router = inject(Router);
+  private router = inject(Router);
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
@@ -41,8 +41,6 @@ export class ReviewFormComponent implements OnChanges {
       rating: [this.rating],
     });
   }
-
-  
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['comment'] && !changes['comment'].firstChange) {
@@ -60,8 +58,7 @@ export class ReviewFormComponent implements OnChanges {
   }
 
   cancelar(): void {
-  this.router.navigate(['/reseñas']); // Ruta principal
+    this.router.navigate(['/reseñas']); // Ruta principal
   }
-
-  
 }
+
