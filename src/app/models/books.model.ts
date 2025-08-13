@@ -11,8 +11,8 @@ export interface IBookCreation{
 export interface IBook{
     id: number;
     title: string;
-    authorId: number;
-    publisherId: number;
+    authorName: string;
+    publisherName: string;
     description: string;
     publicationDate: Date;
     imageUrl: string;

@@ -1,0 +1,33 @@
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+mat-card-content {
+  text-align: center;
+  padding-top: 10px;
+}
+
+mat-card-content h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.author {
+  font-size: 14px;
+  color: #666;
+}

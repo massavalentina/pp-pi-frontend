@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router } from "@angular/router";
+import { ActivatedRoute, Router, RouterModule } from "@angular/router";
 import { IBook, IBookCreation } from "../../../models/books.model";
 import { Component, inject, OnInit } from "@angular/core";
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
@@ -16,7 +16,8 @@ import { MatDialog } from '@angular/material/dialog';
     CommonModule,
     MatCardModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    RouterModule
   ],
   templateUrl: './book-detail.component.html',
   styleUrls: ['./book-detail.component.css']
@@ -81,6 +82,6 @@ export class BookDetailComponent implements OnInit {
   }
 
   goBack() {
-    this.router.navigate(['/books']);
+    this.router.navigate(['/book']);
   }
 }
