@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { WeatherforecastService } from '../../weatherforecast.service';
+import { AppComponent } from '../../app.component';
 
 @Component({
   selector: 'app-home',
