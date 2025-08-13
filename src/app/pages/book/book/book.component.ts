@@ -9,15 +9,18 @@ import Swal from 'sweetalert2';
 import { BookFormComponent } from '../../../components/book/book-form/book-form.component'
 import { IBook } from '../../../models/books.model';
 import { BooksService } from '../../../services/book/books.service';
+import { BookListComponent } from '../../../components/book/book-list/book-list.component';
 
 @Component({
   selector: 'app-book',
+  standalone: true,
   imports: [CommonModule,
     MatIconModule, 
     MatMenuModule, 
     MatDialogModule, 
     MatButtonModule, 
-    MatTableModule],
+    MatTableModule,
+  BookListComponent],
   templateUrl: './book.component.html',
   styleUrl: './book.component.css'
 })

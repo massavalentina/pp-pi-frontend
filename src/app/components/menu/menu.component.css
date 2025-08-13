@@ -13,7 +13,7 @@
 
 .nav-button {
   padding: 6px 130px;
-  background-color: rgba(255, 255, 255, 0.297);
+  background-color: rgba(255, 255, 255, 0.841);
   color: #DAAD29;
   border-radius: 50px; /* redondeo del botón */
   text-decoration: none;
@@ -22,6 +22,6 @@
 }
 
 .nav-button:hover {
-  background-color: #cce0ff; /* color al pasar el mouse */
+  background-color: #ffffcc; /* color al pasar el mouse */
   color: #DAAD29;
 }

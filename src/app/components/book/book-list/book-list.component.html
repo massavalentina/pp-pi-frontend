@@ -1,0 +1,12 @@
+<h2>Libros cargados</h2>
+
+<div class="book-grid">
+  <mat-card class="book-card" *ngFor="let book of books" (click)="goToDetail(book.id)">
+    <img mat-card-image [src]="book.imageUrl || 'https://via.placeholder.com/160x240?text=No+Image'" alt="{{ book.title }}" />
+
+    <mat-card-content>
+      <h3>{{ book.title }}</h3>
+      <p class="author">{{ book.authorName }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
