@@ -12,6 +12,7 @@ import { CreatePublisherComponent } from './pages/publisher/create-publisher/cre
 import { EditPublisher } from './pages/publisher/edit-publisher/edit-publisher.component';
 import { BookComponent } from './pages/book/book/book.component';
 import { BookDetailComponent } from './pages/book/book-detail/book-detail.component';
+import { ReportingComponent } from './pages/reporting/reporting.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,7 +26,7 @@ export const routes: Routes = [
   { path: 'ruta3/crear', component: CreateReviewComponent},
   { path: 'ruta3/editar/:id', component: EditReviewComponent},
   { path: 'book', component: BookComponent },
-  { path: 'book/:id', component: BookDetailComponent }
-
+  { path: 'book/:id', component: BookDetailComponent },
+  { path: 'reporting', component: ReportingComponent },
 
 ];
