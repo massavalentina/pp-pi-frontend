@@ -24,5 +24,8 @@ export const routes: Routes = [
   { path: 'reseñas', component: ReviewsListComponent},
   { path: 'reseñas/crear', component: CreateReviewComponent },
   { path: 'reseñas/editar/:id', component: BooksListComponent },
-  { path: 'book', component: BookComponent }
+  { path: 'book', component: BookComponent },
+  { path: 'book/:id', component: BookDetailComponent },
+  { path: 'reporting', component: ReportingComponent }
+
 ];
