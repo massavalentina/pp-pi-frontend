@@ -1,3 +1,6 @@
+// environment.development.ts
 export const environment = {
-    apiUrl: 'https://localhost:7149'
+  production: false,
+  apiUrl: 'https://localhost:4002'
 };
+

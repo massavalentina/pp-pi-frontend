@@ -1,3 +1,6 @@
+// environment.development.ts
 export const environment = {
-    apiUrl: 'Pending'
+  production: true,
+  apiUrl: 'https://pp-pi-backend.onrender.com'
 };
+
