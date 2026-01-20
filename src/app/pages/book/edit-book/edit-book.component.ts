@@ -7,7 +7,9 @@ import { IBook, IBookCreation } from '../../../models/books.model';
   selector: 'app-edit-book',
   imports: [],
   templateUrl: './edit-book.component.html',
-  styleUrl: './edit-book.component.css'
+  styleUrl: './edit-book.component.css',
+    standalone: true
+
 })
 export class EditBookComponent implements OnInit {
 

@@ -10,7 +10,9 @@ import { IAuthorCreation, IAuthors } from '../../../models/authors.models';
   selector: 'app-author-form',
   imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, RouterLink],
   templateUrl: './author-form.component.html',
-  styleUrl: './author-form.component.css'
+  styleUrl: './author-form.component.css',
+    standalone: true
+
 })
 export class AuthorFormComponent implements OnInit{
   

@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
   selector: 'app-create-book',
   imports: [BookFormComponent],
   templateUrl: './create-book.component.html',
-  styleUrl: './create-book.component.css'
+  styleUrl: './create-book.component.css',
+    standalone: true
+
 })
 
 export class CreateBookComponent {

@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-authors',
+  standalone: true,
   imports: [AuthorFormComponent],
   templateUrl: './edit-authors.component.html',
   styleUrl: './edit-authors.component.css'

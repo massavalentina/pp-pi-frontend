@@ -8,7 +8,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-menu',
   imports: [MatIconModule, MatToolbarModule, MatButtonModule, RouterLink],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+  styleUrl: './menu.component.css',
+  standalone: true
 })
 export class MenuComponent {
 

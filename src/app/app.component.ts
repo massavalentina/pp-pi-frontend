@@ -8,7 +8,8 @@ import { MenuComponent } from './components/menu/menu.component';
   selector: 'app-root',
   imports: [RouterOutlet, MenuComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  standalone: true
 })
 export class AppComponent {
   

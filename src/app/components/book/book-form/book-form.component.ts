@@ -24,7 +24,8 @@ import { IAuthors } from '../../../models/authors.models';
     MatButtonModule,
   ],
   templateUrl: './book-form.component.html',
-  styleUrl: './book-form.component.css'
+  styleUrl: './book-form.component.css',
+  standalone: true
 })
 export class BookFormComponent {
 

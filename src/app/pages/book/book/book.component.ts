@@ -19,7 +19,8 @@ import { BooksService } from '../../../services/book/books.service';
     MatButtonModule, 
     MatTableModule],
   templateUrl: './book.component.html',
-  styleUrl: './book.component.css'
+  styleUrl: './book.component.css',
+  standalone: true
 })
 export class BookComponent {
   bookService = inject(BooksService);
